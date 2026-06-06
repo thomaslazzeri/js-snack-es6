@@ -16,3 +16,19 @@ const squads = [
     },
 ];
 
+const finalResult = (arraySquad) => {
+    for (const squad of arraySquad) {
+        const randomPoints = Math.floor(Math.random() * 100);
+        const randomFouls = Math.floor(Math.random() * 100);
+        squad.pointsScored = randomPoints;
+        squad.FoulsDrawn = randomFouls;
+    }
+    const newArray = arraySquad.map(squad => {
+        return {
+            name: squad.name,
+            FoulsDrawn: squad.FoulsDrawn
+        };
+    });
+    return newArray;
+};
+console.log(finalResult(squads));
