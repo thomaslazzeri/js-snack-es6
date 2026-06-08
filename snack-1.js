@@ -28,6 +28,7 @@ const bikes = [
 ];
 // arrow function
 const finalWeight = () => {
+    // create a variable by assigning it the first element of the array
     let leggera = bikes[0]; // it can also be done like this => bikes[bikes.length];
     // for as keyword
     for (const bike of bikes) {
