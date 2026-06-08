@@ -10,20 +10,34 @@ const bikes = [
     },
     {
         name: 'Colnago',
-        weightKg: 20,
+        weightKg: 7,
     },
+     {
+        name: 'ferrari',
+        weightKg: 25,
+    },
+     {
+        name: 'eros',
+        weightKg: 8,
+    },
+     {
+        name: 'pippo',
+        weightKg: 22,
+    },
+    
 ];
 // arrow function
 const finalWeight = () => {
+    let leggera = bikes[0]; // it can also be done like this => bikes[bikes.length];
     // for as keyword
     for (const bike of bikes) {
-        // if for minor or same value of the weight
-        if (bike.weightKg === 10) {
-            console.log(bike.weightKg);
+        // check which is the lightest bike with an if
+        if (bike.weightKg < leggera.weightKg) {
+            leggera = bike;
         }
     }
     // return a value
-    return bikes;
+    return leggera;
 };
 // call the function
-finalWeight();
+console.log(finalWeight());
