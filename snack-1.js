@@ -15,17 +15,15 @@ const bikes = [
 ];
 // arrow function
 const finalWeight = () => {
-    // variable accumulation
-    let total = 0;
     // for as keyword
     for (const bike of bikes) {
         // if for minor or same value of the weight
-        if (bike.weightKg <= 10)
-            // add in total the value of the weight
-            total += bike.weightKg;
+        if (bike.weightKg === 10) {
+            console.log(bike.weightKg);
+        }
     }
     // return a value
-    return total;
+    return bikes;
 };
 // call the function
-console.log(finalWeight());
+finalWeight();
